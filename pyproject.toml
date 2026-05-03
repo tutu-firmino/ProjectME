@@ -1,0 +1,152 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projectme"
+version = "0.1.0"
+description = "Personalized project scaffolding CLI"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "tutu026" },
+]
+maintainers = [
+    { name = "tutu-firmino" },
+]
+keywords = [
+    "cli",
+    "scaffold",
+    "project-generator",
+    "python",
+    "react",
+    "typer",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "typer>=0.9.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tutu-firmino/ProjectME"
+Documentation = "https://github.com/tutu-firmino/ProjectME/blob/master/DOCUMENTATION.md"
+Repository = "https://github.com/tutu-firmino/ProjectME.git"
+Issues = "https://github.com/tutu-firmino/ProjectME/issues"
+Changelog = "https://github.com/tutu-firmino/ProjectME/blob/master/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "coverage[toml]>=7.0.0",
+]
+lint = [
+    "ruff>=0.1.0"
+]
+build = [
+    "build>=1.0.0",
+    "twine>=6.2.0",
+]
+
+[project.scripts]
+project = "projectme.main:cli"
+projectme = "projectme.main:cli"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["projectme*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = [
+    "-ra",
+    "--strict-config",
+    "--strict-markers",
+]
+pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
+[tool.coverage.run]
+branch = true
+source = ["projectme"]
+omit = [
+    "tests/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 90
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise SystemExit",
+]
+
+[tool.coverage.paths]
+source = [
+    "src/projectme",
+    "*/site-packages/projectme",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests"]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "C4",
+    "E",
+    "F",
+    "I",
+    "N",
+    "PIE",
+    "PT",
+    "RET",
+    "SIM",
+    "UP",
+    "W",
+    "S",
+]
+ignore = [
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101",
+]
