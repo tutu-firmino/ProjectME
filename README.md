@@ -1,6 +1,6 @@
 # ProjectME
 
-[![Version](https://img.shields.io/badge/version-0.1.0-bright_green)](https://github.com/tutu-firmino/ProjectME/releases)
+[![Version](https://img.shields.io/badge/version-0.3.0-bright_green)](https://github.com/tutu-firmino/ProjectME/releases)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
@@ -116,12 +116,12 @@ twine upload dist/*
 
 ## Roadmap
 
-> We are currently on version **v0.1.0**.
+> We are currently on version **v0.3.0**.
 
 **Upcoming features**
 
-- (guaranteed) **v0.2.0**: in addition to more available stacks, a new manifest file feature will come.
-- (planned) **v0.3.0**: AI-powered smart committing tool
+- (guaranteed) **v0.4.0**: in addition to more available stacks, a new manifest file feature will come.
+- (planned) **v0.5.0**: AI-powered smart committing tool
 - (guaranteed) **v1.0.0**: complete coverage and project stabilization
 
 ---
