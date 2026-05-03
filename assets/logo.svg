@@ -2,6 +2,10 @@
   <title>ProjectME logo</title>
   <style>
     .logo-text { font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace; }
+    .txt-main { fill: #111; }
+    @media (prefers-color-scheme: dark) {
+      .txt-main { fill: #f0f0f0; }
+    }
   </style>
-  <text x="240" y="82" class="logo-text" font-size="64" font-weight="700" text-anchor="middle" fill="#111">Project<tspan fill="#4A90D9">ME</tspan></text>
+  <text x="240" y="82" class="logo-text" font-size="64" font-weight="700" text-anchor="middle">Project<tspan fill="#4A90D9">ME</tspan></text>
 </svg>
