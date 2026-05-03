@@ -1,0 +1,7 @@
+<svg width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
+  <title>ProjectME logo</title>
+  <style>
+    .logo-text { font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace; }
+  </style>
+  <text x="240" y="82" class="logo-text" font-size="64" font-weight="700" text-anchor="middle" fill="#111">Project<tspan fill="#4A90D9">ME</tspan></text>
+</svg>

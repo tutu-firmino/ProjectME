@@ -1,12 +1,11 @@
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 import pytest
 from typer.testing import CliRunner
 
 from projectme.main import cli
 from projectme.stacks import python, react
-
 
 runner = CliRunner()
 
